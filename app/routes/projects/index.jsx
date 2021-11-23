@@ -1,16 +1,8 @@
 import { Link, useLoaderData } from "remix";
+import { getProjects } from "~/projects";
 
 export let loader = () => {
-  return [
-    {
-      slug: "my-first-project",
-      title: "My First Project",
-    },
-    {
-      slug: "90s-mixtape",
-      title: "A Mixtape I Made Just For You",
-    },
-  ];
+  return getProjects();
 };
 
 function Projects() {

@@ -8,7 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLocation
+  useLocation,
 } from "remix";
 
 import deleteMeRemixStyles from "~/styles/demos/remix.css";
@@ -29,9 +29,9 @@ export let links = () => {
     {
       rel: "stylesheet",
       href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)"
+      media: "(prefers-color-scheme: dark)",
     },
-    { rel: "stylesheet", href: deleteMeRemixStyles }
+    { rel: "stylesheet", href: deleteMeRemixStyles },
   ];
 };
 
@@ -83,6 +83,9 @@ function Layout({ children }) {
             <ul>
               <li>
                 <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
                 <a href="https://remix.run/docs">Remix Docs</a>
@@ -231,7 +234,7 @@ const RouteChangeAnnouncement = React.memo(() => {
         position: "absolute",
         width: "1px",
         whiteSpace: "nowrap",
-        wordWrap: "normal"
+        wordWrap: "normal",
       }}
     >
       {innerHtml}
